@@ -13,8 +13,8 @@ begin:
   li $v0, 8
   syscall         #take input from user
   
-  lw $t0, $a0
-  bne $t0, empty_string, not_empty
+  lw $t0, empty_string
+  bne $a0, $t0, not_empty
   li $v0, 4
   la $a0, isEmpty_string
   syscall
