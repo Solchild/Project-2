@@ -4,3 +4,4 @@
   long_string: .asciiz "Input is too long."
   invalid_string: .asciiz "Invalid base-27 number."
   .text
+main:
