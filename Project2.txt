@@ -15,6 +15,9 @@ begin:
   
   bne $a0, empty_string, notEmpty
   li $v0, 4
+  la $a0, isEmpty_string
+  syscall
+  
 notEmpy:
   li $v0, 10
   syscall         #Exit Program
