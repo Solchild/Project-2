@@ -8,16 +8,16 @@
   .text
 main:
 begin:  
-  la $a0 insert_into
-  la $a1 insert_into
+  la $a0, insert_into
+  la $a1, insert_into
   li $v0, 8
   syscall         #take input from user
   
-  bne $a0, empty_string, notEmpty
+  bne $a0, empty_string, not_empty
   li $v0, 4
   la $a0, isEmpty_string
   syscall
   
-notEmpy:
+not_empty:
   li $v0, 10
   syscall         #Exit Program
