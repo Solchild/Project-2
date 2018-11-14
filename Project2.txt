@@ -10,3 +10,6 @@ main:
   la $a1 insert_into
   li $v0, 8
   syscall         #take input from user
+
+  li $v0, 10
+  syscall         #Exit Program
