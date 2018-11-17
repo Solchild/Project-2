@@ -14,11 +14,15 @@ begin:
   syscall         #take input from user
   
   lw $t0, empty_string
-  bne $a0, $t0, not_empty
+  beq $a0, $zero, Empty
+  j Exit
+  
+  
+Empty:
   li $v0, 4
   la $a0, isEmpty_string
   syscall
   
-not_empty:
+Exit:
   li $v0, 10
   syscall         #Exit Program
